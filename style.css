@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+body {
+  background: url("images/bg-desktop.png") bottom no-repeat hsl(229, 57%, 11%);
+  background-size: contain;
+  padding: 20.5vw;
+  position: relative;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.left-portion,
+.right-portion {
+  background-color: hsl(228, 56%, 26%);
+  padding: 5%;
+}
+.left-portion {
+  flex: 40%;
+  margin-right: 2.5%;
+  border-radius: 0.8vw 7vw 0.8vw 0.8vw;
+}
+.logo {
+  width: 8.5vw;
+}
+.icons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10%;
+  justify-content: flex-start;
+  align-items: center;
+}
+.icons li {
+  list-style: none;
+  width: 3vw;
+  height: 3vw;
+  position: relative;
+  background-color: hsl(229, 57%, 11%);
+  border-radius: 10px;
+}
+li > img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.icons li:nth-child(2) {
+  margin: 0% 7%;
+}
+.right-portion {
+  flex: 60%;
+  margin-left: 2.5%;
+  margin-top: 5%;
+  border-radius: 0.8vw;
+  color: hsl(243, 100%, 93%);
+  position: relative;
+}
+.info {
+  position: absolute;
+  right: 3vw;
+  top: -3vw;
+  padding: 2% 3%;
+  border-radius: 8px 8px 0px 8px;
+  background-color: hsl(243, 100%, 93%);
+}
+.info p {
+  color: hsl(229, 7%, 55%);
+  font-size: 1vw;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+.info p span {
+  font-size: 2.5vw;
+  color: hsl(229, 57%, 11%);
+}
+.info:after {
+  content: "";
+  border-top: 2vw solid hsl(243, 100%, 93%);
+  border-left: 2vw solid transparent;
+  position: absolute;
+  right: 0%;
+}
+.right-portion > p {
+  font-weight: 400;
+  font-size: 1vw;
+  margin-bottom: 4%;
+}
+.range-bar {
+  width: 100%;
+  height: 1vw;
+  background-color: hsl(229, 57%, 11%);
+  border-radius: 8px;
+  padding: 1px;
+}
+#status {
+  width: 81.5%;
+  height: 0.8vw;
+  border-radius: 8px;
+  background: linear-gradient(45deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  position: relative;
+}
+#status::after {
+  content: "";
+  position: absolute;
+  width: 0.6vw;
+  height: 0.6vw;
+  right: 0%;
+  top: 0%;
+  margin: 1px;
+  background-color: hsl(243, 100%, 93%);
+  border-radius: 50%;
+}
+.tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2%;
+}
+.tags p {
+  font-size: 1vw;
+  font-weight: 700;
+}
+footer {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+/*****************mobile view***************/
+@media screen and (max-width: 480px) {
+  body {
+    background: url("images/bg-mobile.png") no-repeat hsl(229, 57%, 11%);
+    background-size: 100%;
+    padding: 20.5vw 5.5vw;
+    position: relative;
+  }
+  main {
+    flex-direction: column;
+  }
+  .left-portion {
+    flex: 100%;
+    margin: 0% 0% 2.5%;
+    padding: 15%;
+    border-radius: 2.8vw 35vw 2.8vw 2.8vw;
+  }
+  .right-portion {
+    flex: 100%;
+    margin: 2.5% 0% 0%;
+    padding: 10%;
+  }
+  .logo {
+    width: 35vw;
+  }
+  .icons {
+    margin-top: 15%;
+  }
+  .icons li {
+    width: 12.6vw;
+    height: 12.6vw;
+  }
+  .right-portion {
+    border-radius: 2.8vw;
+  }
+  .info {
+    right: unset;
+    top: unset;
+    bottom: -8.5vw;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    padding: 2% 5%;
+  }
+  .info p {
+    font-size: 3.8vw;
+  }
+  .info p span {
+    font-size: 10vw;
+  }
+  .info:after {
+    display: none;
+  }
+  .right-portion p {
+    font-size: 3.8vw;
+    text-align: center;
+    margin-bottom: 6%;
+  }
+  .range-bar {
+    height: 4vw;
+    padding: 2px;
+  }
+  #status {
+    height: 2.8vw;
+  }
+  #status::after {
+    width: 2.6vw;
+    height: 2.6vw;
+  }
+  .tags {
+    margin-top: 3%;
+  }
+  .tags p {
+    font-size: 3.8vw;
+  }
+  footer {
+    bottom: -15%;
+  }
+}
